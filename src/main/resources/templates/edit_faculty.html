@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Faculty</title>
+</head>
+<body>
+<h2>Edit Faculty</h2>
+<form th:object="${faculty}" th:action="@{/faculties/faculty/edit/{id}(id=${faculty.id})}" method="post">
+
+ <!--error vdo13 around 7mn-->
+    <div>
+        <label for="facultyID">Faculty ID</label>
+        <input type="text" id="facultyID" name="facultyID" placeholder="Faculty ID" th:field="${faculty.id}" required>
+    </div>
+    <div>
+        <label for="first_name">First name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Firstname" th:field="${faculty.firstName}" required>
+    </div>
+    <div>
+        <label for="last_name">Lastname</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" th:field="${faculty.lastName}" required>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email" th:field="${faculty.email}" required>
+    </div>
+    <div>
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" placeholder="Department" th:field="${faculty.department}" required>
+    </div>
+
+    <div>
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" name="designation" placeholder="Designation" th:field="${faculty.designation}" required>
+    </div>
+    <button type="submit">Update</button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add_faculty</title>
+</head>
+<body>
+<h1>Add faculty</h1>
+<form action="#" th:object="${faculty}" th:action="@{/faculties/add_faculty}" method="post">
+
+<!--    <div>-->
+<!--        <label for="faculty_id">Faculty Id</label>-->
+<!--        <input type="number" id="faculty_id" name="faculty_id" placeholder="faculty id" th:field="${faculty.id}" required>-->
+<!--    </div>-->
+    <div>
+        <label for="first_name">First name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Firstname" th:field="${faculty.firstName}" required>
+    </div>
+    <div>
+        <label for="last_name">Lastname</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" th:field="${faculty.lastName}" required>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="email" th:field="${faculty.email}" required>
+    </div>
+    <div>
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" placeholder="Department" th:field="${faculty.department}" required>
+    </div>
+    <div>
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" name="designation" placeholder="Designation" th:field="${faculty.designation}" required>
+    </div>
+    <button type="submit">Add</button>
+
+</form>
+</body>
+</html>

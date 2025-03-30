@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Faculty</title>
+</head>
+<body>
+<h2>Faculty Information</h2>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>ID</strong></td>
+        <td th:text="${faculty.id}"></td>
+    </tr>
+    <tr>
+        <td><strong>First name</strong></td>
+        <td th:text="${faculty.firstName}"></td>
+    </tr>
+    <tr>
+        <td><strong>Last Name</strong></td>
+        <td th:text="${faculty.lastName}"></td>
+    </tr>
+    <tr>
+        <td><strong>Email</strong></td>
+        <td th:text="${faculty.email}"></td>
+    </tr>
+    <tr>
+        <td><strong>department</strong></td>
+        <td th:text="${faculty.department}"></td>
+    </tr>
+    <tr>
+        <td><strong>designation</strong></td>
+        <td th:text="${faculty.designation}"></td>
+    </tr>
+    </tbody>
+
+</table>
+<a th:href="@{/faculties/faculty/edit/{id}(id=${faculty.id})}">Edit Info</a>
+
+</body>
+</html>
